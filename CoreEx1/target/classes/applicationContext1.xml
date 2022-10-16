@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    <bean name="u1" class="org.simplilearn.beans.User">
+     <property name="userId" value="1"/>
+     <property name="userName" value="Ali"/>
+     <property name="password" value="asad@simplilaern" />
+    </bean>
+    <bean name="u2" class="org.simplilearn.beans.User">
+     <property name="userId" value="2"/>
+     <property name="userName" value="Asad"/>
+     <property name="password" value="asad@simplilaern"/>
+    </bean>
+    <bean name="quiz" class="org.simplilearn.beans.Quiz">
+    <property name="question" value="What is java"/>
+    <property name="answers">
+          <map>
+              <entry key="Java is OOP language" value-ref="u1"/>
+              <entry key="java is a Technology" value-ref="u2"/>
+          </map>
+         </property>
+    </bean>
+
+</beans>
